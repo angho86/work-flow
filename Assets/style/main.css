@@ -29,6 +29,7 @@ section {
     padding: 5px;
     border: 1px solid #c293a4;
     border-radius: 5px;
+    box-shadow: 0 0 3px #BF849A;
     background-color: #D9B0C3;
     display: flex;
     justify-content: space-between;
