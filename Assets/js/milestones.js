@@ -51,4 +51,4 @@ class milestones {
     }
 }
 
-const newmilestones = new milestones();
+export default milestones;

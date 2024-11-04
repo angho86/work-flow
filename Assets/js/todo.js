@@ -94,4 +94,4 @@ class TaskManager{
 
 }
 
-const taskManager = new TaskManager();
+export default TaskManager;
