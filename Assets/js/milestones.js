@@ -42,9 +42,13 @@ class milestones {
         mileCheckBox.addEventListener("click", ()=>{
             if(mileCheckBox.checked){
                 mileDiv.classList.add("completed");
+                newmilestone.status = "Y";
             } else {
                 mileDiv.classList.remove("completed");
+                newmilestone.status = "N";
             }
+
+            console.log(newmilestone.status, newmilestone.name);
         });
 
         this.mileElement.appendChild(mileDiv);
