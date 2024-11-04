@@ -18,13 +18,37 @@ class milestones {
         const inputValue = input.value;
 
         if(inputValue){
-            const milestone = new milestone(inputValue);
+            const newmilestone = new milestone(inputValue);
             this.milestones.push(milestone);
-            this.render(milestone);
+            this.render(newmilestone);
 
             input.value = "";
         } else {
             console.log("Neivestas milestone!");
         }
     }
+
+    render(newmilestone){
+        const mileDiv = document.createElement('div');
+        mileDiv.className = "task";
+
+        mileDiv.innerHTML = `
+                        <input type="checkbox" class="mile-checkbox" />
+                        <span>${newmilestone.name}</span>`;
+
+
+        const mileCheckBox = mileDiv.querySelector(".mile-checkbox");
+
+        mileCheckBox.addEventListener("click", ()=>{
+            if(mileCheckBox.checked){
+                mileDiv.classList.add("completed");
+            } else {
+                mileDiv.classList.remove("completed");
+            }
+        });
+
+        this.mileElement.appendChild(mileDiv);
+    }
 }
+
+const newmilestones = new milestones();
