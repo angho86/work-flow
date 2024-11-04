@@ -27,3 +27,7 @@ pasiekimai (milestones):
 
 klaidos:
     dienorascio tipo uzrasai prie kiekvieno projekto kokias klaidos padarytos
+
+saugojimas:
+    klases viduje saugoma masyve
+    masyvai saugomi localstorage
