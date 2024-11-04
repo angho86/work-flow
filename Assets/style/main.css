@@ -3,8 +3,10 @@ main {
     justify-content: space-between;
     width: 1400px;
     margin: 0 auto;
-    border: 1px solid black;
-    margin-top: 10px;
+    border: 1px solid #c293a4;
+    border-radius: 5px;
+    margin-top: 30px;
+    box-shadow: 0 0 10px #BF849A;
 }
 
 section {
@@ -13,14 +15,36 @@ section {
 }
 
 #task-list{
-    border: 1px solid black;
+
+    margin-top: 20px;
 }
 
 .completed {
-    background-color: green;
     opacity: 0.5;
+    transition: all 0.3s ease;
 }
 
 .task {
-    padding: 3px;
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid #c293a4;
+    border-radius: 5px;
+    background-color: #D9B0C3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.start-btn,
+.end-btn {
+    padding: 2px;
+    background-color: #e0bac9;
+    margin-left: 10px;
+}
+
+.timer {
+    width: 70px;
+    margin-left: 15px;
+    display: inline-block;
+    text-align: center;
 }

@@ -53,9 +53,11 @@ class TaskManager{
         taskDiv.innerHTML = `
                         <input type="checkbox" class="task-checkbox" />
                         <span>${task.name}</span>
+                        <div class="task-btns">
                         <button class="start-btn">Start</button>
                         <button class="end-btn">End</button>
-                        <span class="timer">${task.timer} s</span>`;
+                        <div class="timer">${task.timer} s</div>
+                        </div>`;
 
         const checkbox = taskDiv.querySelector('.task-checkbox');
         const startBtn = taskDiv.querySelector('.start-btn');
