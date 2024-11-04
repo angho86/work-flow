@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 1400px;
+    margin: 0 auto;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+section {
+    width: 48%;
+    padding: 10px;
+}
+
+#task-list{
+    border: 1px solid black;
+}
+
+.completed {
+    background-color: green;
+    opacity: 0.5;
+}
+
+.task {
+    padding: 3px;
+}

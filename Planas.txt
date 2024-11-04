@@ -1,0 +1,29 @@
+tikslas:
+    stebeti darbo eiga (naudojant laiko parametra)
+    efektyvinti darba
+
+Parametrai kuriuos seku:
+    laikas (kiek laiko programuojama)
+    uzbaigtos uzduotys
+    pasiekimai
+    klaidos
+
+
+laikas:
+    sekamas bendras laikas, o ne kiekvienos uzduoties atskirai +
+    mygtukai:
+        start, pause, end +
+
+uzduotys:
+    pabaigtas projektas
+    galimybe prideti nauja projektas
+    paziureti sarasa pabaigtu, pradetu, nepradetu projektu
+
+pasiekimai (milestones):
+    projektas suskirstytas i milestones
+    sarasas milestones kurie padaryti kurie ne
+    salia milestone yra checkbox uzdeti varnele
+    uzfiksuoti laika kiek uztruko pasiekti milestone
+
+klaidos:
+    dienorascio tipo uzrasai prie kiekvieno projekto kokias klaidos padarytos
