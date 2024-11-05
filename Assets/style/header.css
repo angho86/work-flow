@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 6px #2F3340;
+    border: none;
+    border-radius: 0 0 10px 10px;
+}
+
+#timer {
+    font-size: 25px;
+}
+
+#start-btn{
+    background-color: rgb(75, 161, 75);
+    font-size: 1rem;
+    font-synthesis-weight: 700;
+}
+
+#pause-btn{
+    background-color: rgb(204, 204, 78);
+    font-size: 1rem;
+}
+
+#stop-btn{
+    background-color: rgb(187, 67, 67);
+    font-size: 1rem;
+}

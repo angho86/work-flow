@@ -4,45 +4,46 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #BFB084;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
+body{
+    background-color: #A6976A;
+    color: #181926;
 }
 
 
-header {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-left: 50px;
+#milestone-column, #task-column {
+    float: left;
+    width: 45%;
+    margin: 20px;
+}
+
+.task {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+}
+
+.milestone-btn {
+    margin: 5px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.milestone-btn:hover {
+    background-color: #45a049;
 }
 
 button {
-    padding: 5px;
+    margin: 10px 0;
     cursor: pointer;
+    padding: 3px 10px;
     border: none;
-    border-radius: 3px;
-    transition: all 0.3s ease;
 }
 
-#timer {
-    transition: all 1s ease;
-    font-size: 24px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    font-size: 3rem;
-}
-
-#start-btn {
-    background-color: rgb(57, 179, 57);
-}
-
-#pause-btn {
-    background-color: yellow;
-}
-
-#end-btn {
-    background-color: red;
+input {
+    font-size: 1rem;
+    padding: 2px;
 }

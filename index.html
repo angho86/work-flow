@@ -3,50 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./Assets/style/general.css">
-    <link rel="stylesheet" href="./Assets/style/main.css">
+    <link rel="stylesheet" href="./Assets/style/header.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work flow</title>
+    <title>WorkFLow</title>
 </head>
 <body>
-   <header>
-    <h1>Work Flow</h1>
-    <div id="timer">0 : 0</div>
+
+    <header>
+        <h1>Work Flow</h1>
+        <div id="timer">0 : 0</div>
 
     <button id="start-btn">Start</button>
     <button id="pause-btn">Pause</button>
     <button id="stop-btn">End</button>
-   </header>
+    </header>
     
-<main>
-    <section id="to-do">
-        <input type="text" id="todo-input"/>
-        <button id="todo-add">Add</button>
+    <div id="milestone-column">
+        <h2>Milestones</h2>
+        <input type="text" id="milestone-input" placeholder="Milestone name">
+        <button id="milestone-add">Add Milestone</button>
+        <div id="milestone-list"></div> <!-- Čia bus rodomi milestone mygtukai -->
+    </div>
 
-        <div id="task-list">
+    <div id="task-column">
+        <h2>Tasks</h2>
+        
+        <input type="text" id="todo-input" placeholder="Task name">
+        <button id="todo-add">Add Task</button>
 
-        </div>
+        <div id="task-list"></div> <!-- Čia bus rodomos užduotys -->
 
-    </section>
-
-    <section id="milestones">
-        <input type="text" id="milestone-input"/>
-        <button id="milestone-add">Add</button>
-        <div id="milestone-list">
-
-        </div>
-    </section>
-</main>
+    </div>
 
 
-
-
-
-
-
-
-    <script src="./Assets/js/timer.js"></script>
-    <!-- <script src="./Assets/js/todo.js"></script> -->
-    <!-- <script src="./Assets/js/milestones.js"></script> -->
-    <script src="./Assets/js/main.js" type="module"></script>
+    <script type="module" src="./Assets/js/main.js"></script>
+    <script type="module" src="./Assets/js/timer.js"></script>
 </body>
 </html>
