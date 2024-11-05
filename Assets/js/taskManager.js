@@ -89,7 +89,9 @@ class TaskManager {
         taskDiv.querySelector('.task-start').disabled = false; // ijungia "start"
         taskDiv.querySelector('.task-stop').disabled = true; // ijungia "stop"
 
-        this.updateTimer(task, taskDiv){
+        this.updateTimer(task, taskDiv);
+    }
+    updateTimer(task, taskDiv){
             const timerElement = taskDiv.querySelector('.timer');
             const updateInterval = setInterval(() => {
                 if(task.timer){
@@ -99,7 +101,7 @@ class TaskManager {
                 }
             }, 1000);
         }
-    }
+    
 
     removeTask(task){
         const taskIndex = this.tasks.findIndex(t => t.name === task.name);
