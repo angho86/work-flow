@@ -16,26 +16,6 @@ body{
     margin: 20px;
 }
 
-.task {
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid #ddd;
-    background-color: #f4f4f4;
-}
-
-.milestone-btn {
-    margin: 5px;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.milestone-btn:hover {
-    background-color: #45a049;
-}
-
 button {
     margin: 10px 0;
     cursor: pointer;
