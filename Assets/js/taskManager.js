@@ -26,6 +26,7 @@ class TaskManager {
     renderTask(task) {
         const taskDiv = document.createElement('div');
         taskDiv.className = 'task';
+        taskDiv.dataset.taskName = task.name;
         taskDiv.innerHTML = `
                             <input type="checkbox" class="task-complete"${task.completed ? 'checked' : ''} />
                             <span>${task.name}</span>
@@ -103,18 +104,21 @@ class TaskManager {
         }
     
 
-    removeTask(task){
-        const taskIndex = this.tasks.findIndex(t => t.name === task.name);
-        if(taskIndex > 1){
-            const taskDiv = document.querySelector(`[data-task-name="${task.name}]`);
-            if(taskDiv){
-                taskDiv.remove();
+        removeTask(task) {
+            // Pašaliname užduotį iš pagrindinio užduočių sąrašo
+            const taskIndex = this.tasks.findIndex(t => t.name === task.name);
+            if (taskIndex > -1) {
+                // Pašaliname užduotį iš šio milestone
+                this.activeMilestone.tasks = this.activeMilestone.tasks.filter(t => t.name !== task.name);
+                this.tasks.splice(taskIndex, 1); // Pašalinti užduotį iš bendro sąrašo
+        
+                // Ištriname DOM elementą, kuris atitinka užduotį
+                const taskDiv = document.querySelector(`[data-task-name="${task.name}"]`);
+                if (taskDiv) {
+                    taskDiv.remove(); // Pašalinti DOM elementą
+                }
             }
-
-            this.tasks.splice(taskIndex, 1); // pasalina is bendro saraso
-            this.activeMilestone.tasks = this.activeMilestone.tasks.filter(t => t.name !== task.name); // pasalinama is milestone uzduociu saraso
         }
-    }
 }
 
 export default TaskManager;
