@@ -27,3 +27,16 @@
     margin: 5px;
     padding: 10px;
 }
+
+#milestone-add,
+#todo-add{
+    background-color: #45474e;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+
+#milestone-add:hover,
+#todo-add:hover{
+    background-color: #2b2b35;
+}
