@@ -4,6 +4,7 @@ class Task {
         this.isRunning = false;
         this.timer = 0;
         this.interval = null;
+        this.milestone = null;
     }
 
     startTimer(){
@@ -13,6 +14,10 @@ class Task {
                 this.timer++;
             }, 1000);
         }
+    }
+
+    assignMilestone(milestone){
+        this.milestone = milestone;
     }
 
     endTimer() {
