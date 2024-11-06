@@ -25,7 +25,10 @@
     border-radius: 5px;
     box-shadow: 0 0 6px #2F3340;
     margin: 5px;
-    padding: 10px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #milestone-add,
@@ -39,4 +42,31 @@
 #milestone-add:hover,
 #todo-add:hover{
     background-color: #2b2b35;
+}
+
+.btns-holder{
+    display: inline-block;
+}
+
+.task-start,
+.task-stop,
+.task-delete {
+    font-size: 0.8rem;
+    border-radius: 3px;
+}
+
+.task-start{
+    background-color: #2a9134;
+}
+
+.task-stop{
+    background-color: rgb(231, 59, 59);
+}
+
+.task-delete{
+    background-color: red;
+}
+
+.completed{
+    opacity: 0.5;
 }

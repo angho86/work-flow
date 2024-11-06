@@ -31,9 +31,11 @@ class TaskManager {
                             <input type="checkbox" class="task-complete"${task.completed ? 'checked' : ''} />
                             <span>${task.name}</span>
                             <span class="timer">${task.timeElapsed} s</span>
-                            <button class="task-start">Start</button>
-                            <button class="task-stop" disabled>Stop</button>
-                            <button class="task-delete">Del</button>
+                            <div class="btns-holder">
+                            <button class="task-start"><i class="fa-solid fa-play"></i></button>
+                            <button class="task-stop" disabled><i class="fa-solid fa-stop"></i></button>
+                            <button class="task-delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
         `;
 
         const checkbox = taskDiv.querySelector('.task-complete');
@@ -54,16 +56,14 @@ class TaskManager {
     setActiveMilestone(milestone) {
         this.activeMilestone = milestone;
         this.renderTasksForMilestone(milestone); // Parodyti užduotis priskirtas šiam milestone
-    }
+
+}
 
     // Parodyti užduotis, priskirtas aktyviam milestone
     renderTasksForMilestone(milestone) {
-        this.taskListElement.innerHTML = ''; // Išvalome sąrašą
+        this.taskListElement.innerHTML = '';
         milestone.tasks.forEach((task) => {
-            const taskDiv = document.createElement('div');
-            taskDiv.className = 'task';
-            taskDiv.innerHTML = `<span>${task.name}</span>`;
-            this.taskListElement.appendChild(taskDiv);
+            this.renderTask(task);
         });
     }
 
